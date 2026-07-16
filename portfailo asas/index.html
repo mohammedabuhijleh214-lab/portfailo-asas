@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Cyber Warden — Mohammed Abu Hijleh, freelance web developer building security-minded sites for small businesses."
+    />
+    <meta
+      name="keywords"
+      content="Cyber Warden, Mohammed Abu Hijleh, freelance web developer, security-minded websites, small business web design, Jordan"
+    />
+    <meta name="theme-color" content="#020407" />
+    <meta name="author" content="Mohammed Abu Hijleh — Cyber Warden" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="color-scheme" content="dark" />
+    <link rel="canonical" href="https://mohammedabuhijleh214-lab.github.io/" />
+
+    <meta property="og:site_name" content="Cyber Warden" />
+    <meta property="og:title" content="Cyber Warden — Mohammed Abu Hijleh | Freelance Web Developer" />
+    <meta
+      property="og:description"
+      content="Freelance web developer building security-minded sites for small businesses."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://mohammedabuhijleh214-lab.github.io/" />
+    <meta
+      property="og:image"
+      content="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=75&fm=jpg"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Cyber Warden — security-minded freelance web development" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="ar_AR" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Cyber Warden — Freelance Web Developer" />
+    <meta
+      name="twitter:description"
+      content="Security-minded websites for small businesses — Mohammed Abu Hijleh."
+    />
+    <meta
+      name="twitter:image"
+      content="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=75&fm=jpg"
+    />
+    <meta name="twitter:image:alt" content="Cyber Warden — security-minded freelance web development" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: blob: https: http://127.0.0.1:8787 http://localhost:8787; connect-src 'self' http://127.0.0.1:8787 http://localhost:8787 https://cdn.jsdelivr.net; worker-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; object-src 'none'; upgrade-insecure-requests"
+    />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+    <meta
+      http-equiv="Permissions-Policy"
+      content="camera=(), microphone=(), geolocation=(), payment=(), usb=()"
+    />
+
+    <title>Cyber Warden — Mohammed Abu Hijleh | Freelance Web Developer</title>
+
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="assets/icons/icon-192.svg" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <link rel="sitemap" type="application/xml" href="sitemap.xml" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://images.unsplash.com" crossorigin />
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
+    <link
+      rel="preload"
+      as="image"
+      href="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1600&q=72&fm=webp"
+      fetchpriority="high"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&family=Sora:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/flagship.css" />
+    <link rel="stylesheet" href="css/terminal.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <link rel="stylesheet" href="css/rtl.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+
+  </head>
+  <body>
+    <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
+    <div id="offline-banner" class="sys-banner" hidden aria-hidden="true">
+      <span data-offline-label>You are offline.</span>
+    </div>
+    <div id="pwa-install" class="sys-banner pwa-banner" hidden aria-hidden="true">
+      <span data-pwa-label>Install Cyber Warden</span>
+      <button type="button" class="btn btn-primary btn-sm" id="pwa-install-btn" data-i18n="pwa.installBtn">Install</button>
+      <button type="button" class="btn btn-ghost btn-sm" id="pwa-install-dismiss" data-i18n="pwa.dismiss">Not now</button>
+    </div>
+    <div id="a11y-announcer" class="visually-hidden" aria-live="polite"></div>
+
+    <div id="page-loader" role="status" aria-live="polite" aria-label="Loading">
+      <div class="loader-inner">
+        <div class="loader-brand">Cyber Warden</div>
+        <div class="loader-track" aria-hidden="true"><div id="loader-bar"></div></div>
+        <p id="loader-label">Initializing…</p>
+      </div>
+    </div>
+
+    <div id="scroll-progress" aria-hidden="true"></div>
+    <div id="cursor-glow" aria-hidden="true"></div>
+
+    <div class="atmosphere" aria-hidden="true">
+      <canvas id="webgl-canvas"></canvas>
+      <canvas id="particle-canvas"></canvas>
+      <div class="aurora aurora-a"></div>
+      <div class="aurora aurora-b"></div>
+      <div class="aurora aurora-c"></div>
+      <div class="grid-overlay"></div>
+      <div class="noise-overlay"></div>
+    </div>
+
+    <nav id="site-nav" class="glass" aria-label="Primary">
+      <a class="nav-brand" href="#hero">Cyber <span>Warden</span></a>
+      <button id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-menu">
+        <li><a data-nav-link href="#hero" data-i18n="nav.home">Home</a></li>
+        <li><a data-nav-link href="#services" data-i18n="nav.services">Services</a></li>
+        <li><a data-nav-link href="#projects" data-i18n="nav.work">Work</a></li>
+        <li><a data-nav-link href="#contact" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+      <div class="nav-utils">
+        <button type="button" id="sound-toggle" class="icon-btn" aria-pressed="false" aria-label="Enable sound">♪̸</button>
+        <button type="button" id="locale-toggle" class="icon-btn lang-btn" aria-label="العربية">العربية</button>
+      </div>
+    </nav>
+
+    <aside class="section-indicators" aria-label="Section navigation">
+      <button type="button" data-indicator="hero" data-scroll-to="hero" class="is-active" aria-label="Hero"></button>
+      <button type="button" data-indicator="services" data-scroll-to="services" aria-label="Services"></button>
+      <button type="button" data-indicator="projects" data-scroll-to="projects" aria-label="Projects"></button>
+      <button type="button" data-indicator="contact" data-scroll-to="contact" aria-label="Contact"></button>
+    </aside>
+
+    <main id="main" class="site-main">
+      <!-- HERO -->
+      <section id="hero" class="hero mood-cyan" data-section data-mood="cyan">
+        <div class="hero-visual" data-parallax="40">
+          <img
+            src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1600&q=72&fm=webp"
+            srcset="
+              https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=72&fm=webp 800w,
+              https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=72&fm=webp 1200w,
+              https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1600&q=72&fm=webp 1600w,
+              https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=2000&q=70&fm=webp 2000w
+            "
+            sizes="100vw"
+            alt="Secure infrastructure atmosphere — network servers and cool blue lighting"
+            width="1600"
+            height="1067"
+            fetchpriority="high"
+            decoding="async"
+          />
+          <div class="hero-visual-mask"></div>
+        </div>
+        <svg class="hero-svg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <defs>
+            <radialGradient id="coreGlow" cx="50%" cy="45%" r="50%">
+              <stop offset="0%" stop-color="#61F8FF" stop-opacity="0.4" />
+              <stop offset="40%" stop-color="#A855F7" stop-opacity="0.15" />
+              <stop offset="100%" stop-color="#020407" stop-opacity="0" />
+            </radialGradient>
+          </defs>
+          <circle cx="920" cy="300" r="240" fill="url(#coreGlow)" />
+          <circle class="orbit" cx="920" cy="300" r="170" />
+          <circle class="orbit orbit-gold" cx="920" cy="300" r="220" />
+          <circle class="orbit" cx="920" cy="300" r="270" />
+        </svg>
+        <div class="container hero-content">
+          <p class="hero-sub" data-i18n="hero.sub">Mohammed Abu Hijleh</p>
+          <h1 class="brand-mark">Cyber <span class="brand-accent">Warden</span></h1>
+          <p class="hero-lead" data-i18n="hero.lead">
+            Freelance web developer focused on clean code, solid security basics, and clear communication.
+          </p>
+          <p id="hero-typewriter" aria-live="polite"></p>
+          <div class="hero-actions">
+            <a class="btn btn-primary magnetic" href="#projects" data-i18n="hero.ctaWork">View work</a>
+            <a class="btn btn-ghost magnetic" href="#services" data-i18n="hero.ctaServices">See services</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICES -->
+      <section id="services" class="section mood-sapphire" data-section data-mood="sapphire">
+        <div class="container">
+          <header class="section-header reveal">
+            <p class="eyebrow" data-i18n="services.eyebrow">Services</p>
+            <h2 data-i18n="services.title">What you can hire me for</h2>
+            <p data-i18n="services.lead">Practical packages for freelancers, creators, and small businesses. Prices are starting points and can be adjusted.</p>
+          </header>
+          <div id="services-grid" class="services-grid"></div>
+        </div>
+      </section>
+
+      <!-- STRENGTHS / ABOUT -->
+      <section id="strengths" class="section mood-gold" data-section data-mood="gold">
+        <div class="container">
+          <header class="section-header reveal">
+            <p class="eyebrow" data-i18n="about.eyebrow">About</p>
+            <h2 data-i18n="about.title">How I work with clients</h2>
+            <p data-i18n="about.lead">Straightforward process, secure defaults, and sites that stay maintainable.</p>
+          </header>
+          <div id="strengths-grid" class="strengths-grid"></div>
+        </div>
+      </section>
+
+      <!-- GIFT -->
+      <section id="gift" class="section mood-gold" data-section data-mood="gold">
+        <div class="container">
+          <article class="gift-panel glass reveal">
+            <svg class="morph-bg" viewBox="0 0 720 320" aria-hidden="true" preserveAspectRatio="none">
+              <path
+                data-morph-path
+                d="M0,160 C120,80 240,240 360,160 C480,80 600,240 720,160 L720,320 L0,320 Z"
+                fill="rgba(255,227,162,0.08)"
+              />
+            </svg>
+            <p class="gift-kicker" id="gift-title" data-i18n="gift.title">Client benefit</p>
+            <h2 id="gift-headline" data-i18n="gift.headline">Free monthly security &amp; vulnerability scanning — for life</h2>
+            <p id="gift-desc" data-i18n="gift.description">
+              After you purchase a website from me, you receive complimentary monthly vulnerability scanning for that site — ongoing, at no extra cost.
+            </p>
+            <span class="gift-badge" data-i18n="gift.badge">Included after a website purchase</span>
+          </article>
+        </div>
+      </section>
+
+      <!-- PROJECTS / PORTFOLIO -->
+      <section id="projects" class="section mood-cyan" data-section data-mood="cyan">
+        <div class="container">
+          <header class="section-header reveal">
+            <p class="eyebrow" data-i18n="projects.eyebrow">Portfolio</p>
+            <h2 data-i18n="projects.title">Previous work &amp; demos</h2>
+            <p data-i18n="projects.lead">These projects demonstrate skills and coding ability. They are not products sold as packages.</p>
+          </header>
+          <div id="showcase-rail" class="showcase-rail"></div>
+        </div>
+      </section>
+
+      <!-- TERMINAL -->
+      <section id="terminal" class="section terminal-section mood-cyan" data-section data-mood="cyan">
+        <div class="container">
+          <header class="section-header reveal">
+            <p class="eyebrow" data-i18n="terminal.eyebrow">Interactive shell</p>
+            <h2 data-i18n="terminal.title">Cyber Terminal</h2>
+            <p data-i18n="terminal.lead">Query the operator. Try help, scan, or security.</p>
+          </header>
+          <div id="cyber-terminal" class="glass reveal">
+            <div class="terminal-chrome" aria-hidden="true">
+              <span class="terminal-dot red"></span>
+              <span class="terminal-dot amber"></span>
+              <span class="terminal-dot green"></span>
+              <span class="terminal-title">secure-shell — cyber-warden</span>
+            </div>
+            <div class="terminal-body"><div data-term-output></div></div>
+            <form class="terminal-form" data-term-form autocomplete="off">
+              <label class="visually-hidden" for="term-input">Terminal command</label>
+              <span class="terminal-prompt" aria-hidden="true">›</span>
+  <input id="term-input" data-term-input type="text" spellcheck="false" maxlength="120" data-i18n-placeholder="terminal.placeholder" placeholder="Enter command…" />
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="section mood-crimson" data-section data-mood="crimson">
+        <div class="container">
+          <header class="section-header reveal">
+            <p class="eyebrow" data-i18n="contact.eyebrow">Contact</p>
+            <h2 data-i18n="contact.title">Let’s talk</h2>
+            <p data-i18n="contact.lead">Share a short brief. I’ll reply by email.</p>
+          </header>
+          <div class="contact-grid flagship-contact">
+            <form id="contact-form" class="contact-form glass reveal" novalidate>
+              <div class="hp-field" aria-hidden="true">
+                <label for="website">Website</label>
+                <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" />
+              </div>
+              <div class="field">
+                <label for="c-name" data-i18n="contact.name">Full name</label>
+                <input id="c-name" name="name" required maxlength="80" autocomplete="name" />
+              </div>
+              <div class="field">
+                <label for="c-email" data-i18n="contact.email">Work email</label>
+                <input id="c-email" name="email" type="email" required maxlength="120" autocomplete="email" />
+              </div>
+              <div class="field">
+                <label for="c-company" data-i18n="contact.company">Company</label>
+                <input id="c-company" name="company" maxlength="120" autocomplete="organization" />
+              </div>
+              <div class="field">
+                <label for="c-budget" data-i18n="contact.budget">Budget range</label>
+                <select id="c-budget" name="budget">
+                  <option value="150-300" data-i18n="contact.budget150">$150 – $300</option>
+                  <option value="300-500" data-i18n="contact.budget300">$300 – $500</option>
+                  <option value="500-800" data-i18n="contact.budget500">$500 – $800</option>
+                  <option value="not-sure" data-i18n="contact.budgetOther">Not sure</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="c-message" data-i18n="contact.message">Project brief</label>
+                <textarea id="c-message" name="message" required maxlength="4000" rows="5"></textarea>
+              </div>
+              <p id="contact-status" role="status" aria-live="polite"></p>
+              <button class="btn btn-primary btn-block magnetic" type="submit" data-i18n="contact.send">Transmit securely</button>
+            </form>
+
+            <aside class="contact-aside glass reveal">
+              <h3 class="contact-aside-title" data-i18n="contact.asideTitle">Built for high-trust brands</h3>
+              <p class="contact-aside-copy" data-i18n="contact.asideCopy">
+                Security-first delivery, clean architecture, and cinematic craft — with free lifetime monthly vulnerability scanning.
+              </p>
+              <ul class="contact-list">
+                <li><span>Email</span><a id="contact-email" href="#">email</a></li>
+                <li><span>Phone</span><a id="contact-phone" href="#">phone</a></li>
+                <li><span>GitHub</span><a id="contact-github" href="#" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                <li><span>LinkedIn</span><a id="contact-linkedin" href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                <li><span>Discord</span><a id="contact-discord" href="#" target="_blank" rel="noopener noreferrer">Discord</a></li>
+              </ul>
+            </aside>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© <span id="year"></span> Cyber Warden · Mohammed Abu Hijleh. <span data-i18n="footer">All rights reserved.</span></p>
+        <p class="admin-hint">
+          <button type="button" id="admin-trigger" data-i18n="admin">Secure Admin Portal</button>
+          · type <kbd>cwadmin</kbd>
+        </p>
+      </div>
+    </footer>
+
+    <div id="project-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
+      <div class="modal-backdrop"></div>
+      <div class="modal-panel glass">
+        <button type="button" class="modal-close" id="modal-close" data-i18n-aria="common.close" aria-label="Close dialog">×</button>
+        <div id="modal-content"></div>
+      </div>
+    </div>
+
+    <div id="admin-login" class="admin-overlay" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="login-title">
+      <div class="admin-overlay-backdrop"></div>
+      <div class="admin-login-panel glass">
+        <button type="button" class="login-close" id="admin-login-close" data-i18n-aria="common.close" aria-label="Close">×</button>
+        <h2 id="login-title" data-i18n="auth.title">Secure Admin Portal</h2>
+        <p class="login-sub" data-i18n="auth.sub">Server-side authentication · CSRF · HTTP-only session</p>
+        <form id="admin-login-form" autocomplete="off">
+          <div class="field">
+            <label for="admin-username" data-i18n="auth.username">Operator ID</label>
+            <input id="admin-username" name="username" type="text" required maxlength="64" autocomplete="username" />
+          </div>
+          <div class="field">
+            <label for="admin-password" data-i18n="auth.password">Passphrase</label>
+            <input id="admin-password" name="password" type="password" required minlength="8" maxlength="128" autocomplete="current-password" />
+          </div>
+          <ul id="handshake-stages" hidden></ul>
+          <p id="login-error" role="alert"></p>
+          <button class="btn btn-primary btn-block" type="submit" data-i18n="auth.submit">Sign in</button>
+        </form>
+        <p class="login-note" data-i18n="auth.note">
+          Sign-in requires the secure auth API. Credentials are verified on the server only — never in the browser.
+        </p>
+      </div>
+    </div>
+
+    <div id="admin-dashboard" aria-hidden="true">
+      <header class="dash-header">
+        <h1 data-i18n="dash.heading">Command Center</h1>
+        <div class="dash-header-actions">
+          <button type="button" class="btn btn-ghost" id="dash-undo" data-i18n="dash.undo">Undo</button>
+          <button type="button" class="btn btn-ghost" id="dash-redo" data-i18n="dash.redo">Redo</button>
+          <button type="button" class="btn btn-ghost" id="dash-preview" data-i18n="dash.preview">Preview</button>
+          <button type="button" class="btn btn-ghost" id="export-json" data-i18n="dash.export">Export JSON</button>
+          <label class="btn btn-ghost file-btn"><span data-i18n="dash.import">Import JSON</span><input type="file" id="import-json" accept="application/json,.json" /></label>
+          <button type="button" class="btn btn-primary" id="admin-logout" data-i18n="dash.logout">Sign out</button>
+        </div>
+      </header>
+      <p id="autosave-status" class="autosave-status" aria-live="polite"></p>
+      <div id="cms-preview" class="cms-preview" hidden></div>
+      <div class="dash-layout">
+        <div class="stats-row">
+          <article class="stat-card glass"><span data-i18n="dash.views">Page Views</span><strong id="stat-views">0</strong></article>
+          <article class="stat-card glass"><span data-i18n="dash.portfolio">Portfolio Items</span><strong id="stat-projects">0</strong></article>
+          <article class="stat-card glass"><span data-i18n="dash.services">Services</span><strong id="stat-services">0</strong></article>
+          <article class="stat-card glass"><span data-i18n="dash.published">Published Services</span><strong id="stat-published">0</strong></article>
+        </div>
+        <div class="dash-panels">
+          <section class="dash-panel glass">
+            <h2 data-i18n="dash.analytics">Local analytics</h2>
+            <canvas id="analytics-chart" width="600" height="180" aria-label="Local analytics"></canvas>
+            <p class="dash-note" data-i18n="dash.analyticsNote">Counts from this browser only — not live production traffic.</p>
+          </section>
+          <section class="dash-panel glass">
+            <h2 data-i18n="dash.audit">Audit Timeline</h2>
+            <ul id="audit-list"></ul>
+          </section>
+        </div>
+        <section class="dash-panel glass">
+          <h2 data-i18n="dash.projectMgmt">Portfolio Management</h2>
+          <div class="dash-toolbar">
+            <input id="dash-search" type="search" data-i18n-placeholder="dash.search" placeholder="Search projects…" maxlength="80" />
+            <select id="dash-filter-status" aria-label="Filter by status">
+              <option value="all" data-i18n="dash.allStatuses">All statuses</option>
+              <option value="published" data-i18n="dash.publishedStatus">Published</option>
+              <option value="draft" data-i18n="dash.draft">Draft</option>
+              <option value="archived" data-i18n="dash.archived">Archived</option>
+            </select>
+            <select id="dash-sort" aria-label="Sort projects">
+              <option value="updatedAt" data-i18n="dash.sortUpdated">Sort: Updated</option>
+              <option value="title" data-i18n="dash.sortTitle">Sort: Title</option>
+            </select>
+          </div>
+          <div class="table-wrap">
+            <table class="dash-table">
+              <thead>
+                <tr>
+                  <th data-i18n="dash.colTitle">Title</th>
+                  <th data-i18n="dash.status">Status</th>
+                  <th data-i18n="dash.visibility">Visibility</th>
+                  <th data-i18n="dash.actions">Actions</th>
+                </tr>
+              </thead>
+              <tbody id="projects-tbody"></tbody>
+            </table>
+          </div>
+          <div class="pagination">
+            <button type="button" id="dash-prev" data-i18n="dash.prev">Prev</button>
+            <span id="dash-page-label">Page 1</span>
+            <button type="button" id="dash-next" data-i18n="dash.next">Next</button>
+          </div>
+        </section>
+        <section class="dash-panel glass">
+          <h2 id="form-title" data-i18n="dash.addProject">Add Portfolio Item</h2>
+          <form id="project-form">
+            <div class="field"><label for="p-title" data-i18n="dash.colTitle">Title</label><input id="p-title" name="title" required maxlength="120" /></div>
+            <div class="field"><label for="p-short" data-i18n="dash.shortDesc">Short Description</label><textarea id="p-short" name="shortDescription" required maxlength="280"></textarea></div>
+            <div class="field"><label for="p-full" data-i18n="dash.fullDesc">Full Description</label><textarea id="p-full" name="fullDescription" maxlength="4000"></textarea></div>
+            <div class="field"><label for="p-live" data-i18n="dash.liveUrl">Live URL</label><input id="p-live" name="liveUrl" type="url" maxlength="500" /></div>
+            <div class="field"><label for="p-image" data-i18n="dash.imageUrl">Image URL</label><input id="p-image" name="imageUrl" type="url" maxlength="2000" /></div>
+            <div class="field">
+              <label for="p-image-file" data-i18n="dash.uploadImage">Upload image</label>
+              <input id="p-image-file" type="file" accept="image/jpeg,image/png,image/webp,image/gif" />
+            </div>
+            <div class="field">
+              <label for="p-status" data-i18n="dash.status">Status</label>
+              <select id="p-status" name="status">
+                <option value="draft" data-i18n="dash.draft">Draft</option>
+                <option value="published" data-i18n="dash.publishedStatus">Published</option>
+                <option value="archived" data-i18n="dash.archived">Archived</option>
+              </select>
+            </div>
+            <div class="field"><label for="p-features" data-i18n="dash.features">Features (one per line)</label><textarea id="p-features" name="features"></textarea></div>
+            <div class="field"><label for="p-sec" data-i18n="dash.secFeatures">Security Features (one per line)</label><textarea id="p-sec" name="securityFeatures"></textarea></div>
+            <div class="field"><label for="p-tech" data-i18n="dash.tech">Technologies (comma separated)</label><input id="p-tech" name="technologies" maxlength="500" /></div>
+            <div class="field"><label for="p-arch" data-i18n="dash.architecture">Architecture</label><textarea id="p-arch" name="architecture"></textarea></div>
+            <div class="field"><label for="p-chal" data-i18n="dash.challenges">Challenges</label><textarea id="p-chal" name="challenges"></textarea></div>
+            <div class="field"><label for="p-sol" data-i18n="dash.solutions">Solutions</label><textarea id="p-sol" name="solutions"></textarea></div>
+            <div class="checkbox-row">
+              <label><input type="checkbox" name="hidden" /> <span data-i18n="dash.hidden">Hidden</span></label>
+              <label><input type="checkbox" name="featured" /> <span data-i18n="dash.featured">Featured</span></label>
+            </div>
+            <div class="form-actions">
+              <button class="btn btn-primary" type="submit" data-i18n="dash.saveProject">Save Project</button>
+              <button class="btn btn-ghost" type="button" id="project-form-reset" data-i18n="dash.reset">Reset</button>
+            </div>
+          </form>
+        </section>
+        <section class="dash-panel glass">
+          <h2 data-i18n="dash.serviceMgmt">Services Management</h2>
+          <p class="dash-note" data-i18n="dash.dragHint">Drag rows to reorder services before publishing.</p>
+          <div class="dash-toolbar">
+            <button type="button" class="btn btn-ghost" id="export-services" data-i18n="dash.exportServices">Export Services</button>
+          </div>
+          <div class="table-wrap">
+            <table class="dash-table">
+              <thead>
+                <tr>
+                  <th data-i18n="dash.colTitle">Title</th>
+                  <th data-i18n="dash.price">Price</th>
+                  <th data-i18n="dash.status">Status</th>
+                  <th data-i18n="dash.visibility">Visibility</th>
+                  <th data-i18n="dash.actions">Actions</th>
+                </tr>
+              </thead>
+              <tbody id="services-tbody"></tbody>
+            </table>
+          </div>
+        </section>
+        <section class="dash-panel glass">
+          <h2 id="service-form-title" data-i18n="dash.addService">Add Service</h2>
+          <form id="service-form">
+            <div class="field"><label for="s-title" data-i18n="dash.colTitle">Title</label><input id="s-title" name="title" required maxlength="120" /></div>
+            <div class="field"><label for="s-short" data-i18n="dash.shortDesc">Short Description</label><textarea id="s-short" name="shortDescription" required maxlength="280"></textarea></div>
+            <div class="field"><label for="s-full" data-i18n="dash.fullDesc">Full Description</label><textarea id="s-full" name="fullDescription" maxlength="4000"></textarea></div>
+            <div class="field"><label for="s-price" data-i18n="dash.price">Price</label><input id="s-price" name="price" type="number" min="0" step="1" /></div>
+            <div class="field"><label for="s-image" data-i18n="dash.imageUrl">Image URL</label><input id="s-image" name="imageUrl" type="url" maxlength="2000" /></div>
+            <div class="field">
+              <label for="s-image-file" data-i18n="dash.uploadImage">Upload image</label>
+              <input id="s-image-file" type="file" accept="image/jpeg,image/png,image/webp,image/gif" />
+            </div>
+            <div class="field">
+              <label for="s-status" data-i18n="dash.status">Status</label>
+              <select id="s-status" name="status">
+                <option value="draft" data-i18n="dash.draft">Draft</option>
+                <option value="published" data-i18n="dash.publishedStatus">Published</option>
+                <option value="archived" data-i18n="dash.archived">Archived</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="s-accent" data-i18n="dash.accent">Accent</label>
+              <select id="s-accent" name="accent">
+                <option value="cyan">Cyan</option>
+                <option value="violet">Violet</option>
+                <option value="gold">Gold</option>
+                <option value="emerald">Emerald</option>
+              </select>
+            </div>
+            <div class="field"><label for="s-sort" data-i18n="dash.sortOrder">Sort Order</label><input id="s-sort" name="sortOrder" type="number" min="0" step="1" value="0" /></div>
+            <div class="field"><label for="s-deliverables" data-i18n="dash.deliverables">Deliverables (one per line)</label><textarea id="s-deliverables" name="deliverables"></textarea></div>
+            <div class="checkbox-row">
+              <label><input type="checkbox" name="hidden" /> <span data-i18n="dash.hidden">Hidden</span></label>
+              <label><input type="checkbox" name="featured" /> <span data-i18n="dash.featured">Featured</span></label>
+            </div>
+            <div class="form-actions">
+              <button class="btn btn-primary" type="submit" data-i18n="dash.saveService">Save Service</button>
+              <button class="btn btn-ghost" type="button" id="service-form-reset" data-i18n="dash.reset">Reset</button>
+            </div>
+          </form>
+        </section>
+      </div>
+    </div>
+
+    <div id="toast-host" aria-live="polite" aria-relevant="additions"></div>
+    <script type="module" src="js/script.js"></script>
+  </body>
+</html>

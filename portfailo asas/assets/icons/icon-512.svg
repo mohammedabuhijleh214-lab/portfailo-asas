@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Cyber Warden">
+  <rect width="512" height="512" rx="112" fill="#020407"/>
+  <circle cx="256" cy="256" r="144" fill="none" stroke="#61F8FF" stroke-width="14"/>
+  <circle cx="256" cy="256" r="80" fill="none" stroke="#FFE3A2" stroke-width="10"/>
+  <circle cx="256" cy="256" r="26" fill="#61F8FF"/>
+</svg>

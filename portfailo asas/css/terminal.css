@@ -1,0 +1,97 @@
+/* Cyber Warden — Terminal */
+
+.terminal-section .section-header {
+  margin-bottom: 1.5rem;
+}
+
+#cyber-terminal {
+  overflow: hidden;
+  border-color: rgba(97, 248, 255, 0.28);
+}
+
+.terminal-chrome {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.terminal-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.terminal-dot.red {
+  background: #ff6b8a;
+}
+.terminal-dot.amber {
+  background: #ffe3a2;
+}
+.terminal-dot.green {
+  background: #5dffb0;
+}
+
+.terminal-title {
+  margin-left: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.terminal-body {
+  height: min(420px, 55vh);
+  overflow: auto;
+  padding: 1rem 1.1rem 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.84rem;
+  line-height: 1.55;
+  background:
+    linear-gradient(180deg, rgba(97, 248, 255, 0.03), transparent 30%),
+    rgba(0, 0, 0, 0.25);
+}
+
+.term-line {
+  color: #c8d6e8;
+  margin-bottom: 0.35rem;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.term-line.term-cmd {
+  color: var(--gold);
+}
+
+.terminal-form {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.85rem 1.1rem 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.terminal-prompt {
+  font-family: var(--font-mono);
+  color: var(--cyan);
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+#term-input,
+[data-term-input] {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-family: var(--font-mono);
+  font-size: 0.88rem;
+  color: var(--text);
+  caret-color: var(--cyan);
+}
+
+#term-input:disabled,
+[data-term-input]:disabled {
+  opacity: 0.5;
+}
