@@ -1,0 +1,304 @@
+/* Cyber Warden — Cross-breakpoint + cross-browser layout safety */
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+img,
+video,
+canvas,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+img {
+  object-fit: cover;
+}
+
+/* Prevent horizontal scroll on all viewports */
+html,
+body {
+  overflow-x: hidden;
+  overflow-x: clip;
+  max-width: 100%;
+}
+
+.site-main,
+.section,
+.hero,
+.container {
+  max-width: 100%;
+}
+
+/* Focus — visible for keyboard only */
+:focus {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--cyan, #61f8ff);
+  outline-offset: 3px;
+}
+
+.btn:focus-visible,
+.icon-btn:focus-visible,
+.nav-links a:focus-visible {
+  outline: 2px solid var(--cyan, #61f8ff);
+  outline-offset: 3px;
+}
+
+/* Safari / Firefox backdrop-filter fallback */
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .glass,
+  #site-nav.glass,
+  .admin-login-panel {
+    background: rgba(8, 14, 24, 0.92);
+  }
+}
+
+/* ——— Ultra-narrow phones (320) ——— */
+@media (max-width: 359px) {
+  :root {
+    --nav-h: 64px;
+  }
+
+  .brand-mark {
+    font-size: clamp(1.75rem, 11vw, 2.4rem);
+  }
+
+  .hero-lead {
+    font-size: 0.95rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .section-header h2 {
+    font-size: clamp(1.35rem, 7vw, 1.75rem);
+  }
+
+  .container {
+    width: min(100% - 1.25rem, var(--max));
+  }
+
+  .nav-brand {
+    font-size: 0.95rem;
+  }
+
+  .dash-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .dash-header-actions {
+    flex-wrap: wrap;
+  }
+}
+
+/* ——— Small phones (375–424) ——— */
+@media (max-width: 424px) {
+  .case-gallery {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+  }
+
+  .gift-panel {
+    padding: 1.25rem;
+  }
+
+  .gift-panel h2 {
+    font-size: clamp(1.2rem, 6vw, 1.55rem);
+  }
+
+  .stat-card strong {
+    font-size: 1.35rem;
+  }
+
+  .terminal-chrome {
+    font-size: 0.8rem;
+  }
+}
+
+/* ——— Large phones / small tablets (425–767) ——— */
+@media (max-width: 767px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .case-study {
+    margin-bottom: 2rem;
+  }
+
+  .case-hero h3 {
+    font-size: clamp(1.25rem, 5vw, 1.6rem);
+  }
+
+  .device-stage {
+    grid-template-columns: 1fr;
+  }
+
+  .device-tablet,
+  .device-mobile {
+    display: none;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-panel {
+    width: min(100% - 1rem, 640px);
+    max-height: min(92dvh, 92vh);
+    overflow: auto;
+  }
+
+  .section {
+    padding-block: clamp(3rem, 8vw, 5rem);
+  }
+
+  #admin-dashboard .dash-layout {
+    padding: 1rem;
+  }
+
+  .dash-table {
+    font-size: 0.85rem;
+  }
+
+  .table-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+  }
+}
+
+/* ——— Tablet (768–1023) ——— */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .strengths-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .device-stage {
+    grid-template-columns: 1.4fr 1fr;
+  }
+
+  .device-mobile {
+    display: none;
+  }
+
+  .hero-content {
+    max-width: 36rem;
+  }
+}
+
+/* ——— Laptop (1024–1439) ——— */
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .services-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .hero-content {
+    max-width: 40rem;
+  }
+}
+
+/* ——— Desktop (1440–1919) ——— */
+@media (min-width: 1440px) {
+  .services-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  :root {
+    --max: 1240px;
+  }
+}
+
+/* ——— Large desktop (1920–2559) ——— */
+@media (min-width: 1920px) {
+  :root {
+    --max: 1360px;
+  }
+
+  .hero-lead {
+    max-width: 36rem;
+  }
+
+  .brand-mark {
+    font-size: clamp(3.5rem, 5vw, 5rem);
+  }
+}
+
+/* ——— 2K / QHD (2560–3839) ——— */
+@media (min-width: 2560px) {
+  :root {
+    --max: 1600px;
+    --nav-h: 80px;
+  }
+
+  body {
+    font-size: 1.05rem;
+  }
+
+  .section {
+    padding-block: 7rem;
+  }
+}
+
+/* ——— 4K (3840+) ——— */
+@media (min-width: 3840px) {
+  :root {
+    --max: 1800px;
+  }
+
+  body {
+    font-size: 1.125rem;
+  }
+
+  .brand-mark {
+    font-size: 5.5rem;
+  }
+
+  .container {
+    width: min(100% - 4rem, var(--max));
+  }
+}
+
+/* Performance: skip paint for offscreen sections when supported */
+@supports (content-visibility: auto) {
+  #services,
+  #strengths,
+  #gift,
+  #projects,
+  #terminal,
+  #contact {
+    content-visibility: auto;
+    contain-intrinsic-size: 800px;
+  }
+}
+
+/* High-DPI sharpness for UI chrome */
+@media (min-resolution: 2dppx) {
+  .nav-brand,
+  .brand-mark {
+    -webkit-font-smoothing: antialiased;
+  }
+}
