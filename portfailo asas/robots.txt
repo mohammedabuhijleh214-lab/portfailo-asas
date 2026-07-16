@@ -1,7 +1,0 @@
-User-agent: *
-Allow: /
-Disallow: /server/
-Disallow: /uploads/
-Disallow: /docs/
-
-Sitemap: https://mohammedabuhijleh214-lab.github.io/sitemap.xml
